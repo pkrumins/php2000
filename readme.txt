@@ -7,5 +7,8 @@ His blog is at http://www.catonmat.net  --  good coders code, great reuse.
 
 ------------------------------------------------------------------------------
 
-will import it soon, just found its source.
+It uses website.conf INI file to store the possible request pages in the
+[pages] section.
+
+To use it, rewrite all requests to index.php.
 
