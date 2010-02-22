@@ -3,7 +3,7 @@
 ** Peteris Krumins
 ** peteris.krumins@gmail.com                 
 **
-** A routing framework written in 2000.
+** A simple URL routing code, written in 2000.
 */
 
 error_reporting(E_ALL);
@@ -18,7 +18,7 @@ $SiteConfig = parse_ini_file('website.conf', true);
 
 $parts = parse_url($_SERVER['REQUEST_URI']);
 $path  = preg_replace('#^/+#',   '', $parts['path']); // drop slashes from the beginning of the request path
-$path  = preg_replace('#(//)+#', '', $path);        // drop duplicate slashes
+$path  = preg_replace('#(//)+#', '', $path);          // drop duplicate slashes
 $path  = preg_replace('#/+$#',   '', $path);          // drop trailing slashes
 $path  = split('/', $path);
 
